@@ -1,0 +1,306 @@
+
+
+
+
+
+
+
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@m0.0.1-alpha/CSS/rounded-drawer-buttons.css');
+
+
+
+
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/fixes.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/jf_font.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/accentlist.css');
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/base.css');
+
+
+
+
+
+
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/rounding_circlehover.css');
+
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/episodelist/episodes_compactlist.css');
+
+
+
+
+
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/fields/fields_noborder.css');
+
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/cornerindicator/indicator_corner.css');
+
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/type/dark_withaccent.css');
+
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/titlepage/title_simple-logo.css');
+
+@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/progress/floating.css');
+
+
+
+
+@import url('https://ctalvio.github.io/Monochromic/backdrop-hack_style.css');
+
+.backdropImage {filter: blur(8px) saturate(100%) contrast(100%) brightness(30%);}
+
+
+
+
+#loginPage {background: url(/Branding/Splashscreen?format=jpg&foregroundLayer=0.15) !important;
+    background-position: center !important;
+    background-size: cover !important;}
+
+#hoverenlarge
+.homeLibraryButton:hover,.homeLibraryButton:focus,.card:hover,.card:focus {
+-webkit-filter:none!important;
+filter: none!important;
+transform:scale(1.05)!important
+
+}
+
+
+#resize
+.section2 .card.overflowBackdropCard.card-hoverable.card-withuserdata {
+width:11vw
+}
+.section1 .card.overflowBackdropCard.card-hoverable.card-withuserdata {
+width:17vw
+}
+.section1 .emby-scrollbuttons.padded-right {
+    margin-top: -1.5vh;
+}
+
+
+/*Accent and roundingd*/
+:root {--accent: 98, 121, 205;}
+:root {--rounding: 12px;}
+
+/*play button*/
+.layout-desktop .mainDetailButtons {
+  margin-top: 1.5em;
+}
+
+.layout-desktop .btnPlay {
+    /*border: 2px solid #cecece;*/
+    border-radius: 2em;
+    /*width: 7vw;*/
+    background-color: white;
+    /*padding: 0.4em!important;*/
+    /*margin-right: 30%!important;*/
+}
+
+.layout-desktop .btnPlay:hover {
+  background-color: #687ccc;
+}
+
+.layout-desktop .btnPlay::after {
+  content : attr(title);
+  margin: 0 10px 0 2px;
+  color: black;
+}
+
+.layout-desktop .material-icons.detailButton-icon.play_arrow {
+  color: black;
+}
+
+.layout-desktop .btnPlay.detailButton {
+  flex-direction: row;
+}
+
+.layout-desktop .listViewUserDataButtons {
+  display: none;
+}
+
+/*Tmbd icons*/
+a.button-link.emby-button[href^="https://www.imdb.com"] {
+    display: inline-block;
+    width: 65px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+    background-image: url('https://i.imgur.com/hmyfzC6.png'); /* Replace 'path_to_imdb_logo_image' with the URL or path to the IMDb logo image */
+    background-size: contain;
+background-repeat: no-repeat;
+    text-indent: -9999px; /* Hide the text */
+}
+a.button-link.emby-button[href^="https://www.themoviedb.org"] {
+    display: inline-block;
+    width: 70px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+    background-image: url('https://i.imgur.com/0MhE6be.png'); /* Replace 'path_to_imdb_logo_image' with the URL or path to the IMDb logo image */
+    background-size: contain;
+background-repeat: no-repeat;
+    text-indent: -9999px; /* Hide the text */
+}
+a.button-link.emby-button[href^="https://www.thetvdb.com"] {
+    display: inline-block;
+    width: 60px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+    background-image: url('https://i.imgur.com/PGx1fjy.png'); /* Replace 'path_to_imdb_logo_image' with the URL or path to the IMDb logo image */
+    background-size: contain;
+background-repeat: no-repeat;
+    text-indent: -9999px; /* Hide the text */
+}
+a.button-link.emby-button[href^="https://trakt.tv"] {
+    display: inline-block;
+    width: 50px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+    background-image: url('https://i.imgur.com/4NVRw8B.png'); /* Replace 'path_to_imdb_logo_image' with the URL or path to the IMDb logo image */
+    background-size: contain;
+background-repeat: no-repeat;
+    text-indent: -9999px; /* Hide the text */
+}
+a.button-link.emby-button[href^="https://www.themoviedb.org/collection"] {
+    display: inline-block;
+    width: 35px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+    background-image: url('https://i.imgur.com/s9ImsMW.png'); /* Replace 'path_to_imdb_logo_image' with the URL or path to the IMDb logo image */
+    background-size: contain;
+background-repeat: no-repeat;
+    text-indent: -9999px; /* Hide the text */
+}
+.itemExternalLinks.focuscontainer-x {
+    font-size: 0 !important; /* Hide all text */
+}
+
+.itemExternalLinks.focuscontainer-x a {
+    font-size: 92% !important; /* Restore font size for links */
+}
+
+.itemTags.focuscontainer-x {
+    display: none !important;
+}
+/*move play now*/
+.layout-desktop .detailPagePrimaryContainer {
+  display: inline-table;
+  z-index: 2;
+  left: 32.5%;
+}
+.layout-desktop .detailPageSecondaryContainer {
+  margin: 0 0 1.25em 0;
+}
+
+
+#indexPage .sectionTitle:before {
+    content: "";
+    display: inline-block;
+    width: 1.3em;
+    height: 2px;
+    background: #fff;
+    margin-right: 10px; /* Adjust as needed */
+    vertical-align: middle;
+    transform: translateY(-2px); /* Adjust as needed */
+}
+
+
+
+/* Transparent header bar */
+.skinHeader {
+    background-color: transparent !important;
+}
+.layout-desktop .skinHeader {
+    padding-top: 1.5em !important;
+}
+/* Rounded header buttons */
+.layout-desktop .headerTabs,
+.layout-desktop .headerRight {
+    background-color:rgba(35, 35, 35, 0.5) !important;
+    border-radius: 50px !important;
+    backdrop-filter: blur(50px) !important;
+}
+/* Button height */
+
+.emby-tab-button {
+    height: 45px !important;
+}
+/* Move left header back up */
+.layout-desktop .headerLeft,
+.layout-desktop .headerRight {
+    position: relative !important;
+    top: -17px !important;
+}
+
+.emby-button-foreground {
+    margin-top: -12px; /* Adjust as needed */
+}
+
+
+@keyframes backgroundScroll {
+  0% {
+    background-position: 99% 1%;
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  20% {
+    background-position: 1% 50%;
+  }
+  40% {
+    background-position: 99% 99%;
+  }
+  60% {
+    background-position: 1% 1%;
+  }
+  80% {
+    background-position: 50% 99%;
+  }
+  100% {
+    background-position: 99% 1%;
+  }
+}
+
+@keyframes backgroundScrollmob {
+  0% {
+    background-position: 99% 1%;
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  94% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 50% 50%;
+    opacity: 0;
+  }
+}
+
+@media all and (min-width: 100em){
+  .backdropImage {
+    background-size: 150% 150%;
+    background-position: 99% 1%;
+    animation: backgroundScroll 300s linear; /* Adjusted duration */
+    animation-iteration-count: infinite;
+  }
+}
+
+@media all and (max-width: 100em){
+  .backdropImage {
+    background-position: 99% 1%;
+    animation: backgroundScrollmob 10s ease; /* Adjusted duration */
+    animation-iteration-count: infinite;
+  }
+}
+
+
+ /*glass*/
+.layout-desktop {
+  @supports (backdrop-filter: blur(15px)) {
+    .dialog,
+    .mainDrawer,
+    .toast,
+    .appfooter {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+    .paper-icon-button-light:hover,
+    #itemDetailPage .itemProgressBar,
+    #dashboardPage .backgroundProgress > div {
+    }
+
+    .indicator {
+
+    }
+  }
+}
