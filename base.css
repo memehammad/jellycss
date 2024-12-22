@@ -825,15 +825,7 @@ progress::-webkit-progress-value {
 }
 
 /*Make watched icon, footer on chapter thumnails (and other things), and count indicator dark and transparent*/
-.innerCardFooter,
-.countIndicator, 
-.playedIndicator {
-  background: rgba(0,0,0,0.4); 
-  box-shadow: none;
-}
-.countIndicator {
-  box-shadow: none;
-}
+
 
 /*Modify subtitle settings page*/
 .subtitleappearance-preview {
