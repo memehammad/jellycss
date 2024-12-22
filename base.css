@@ -551,7 +551,6 @@ progress::-webkit-progress-value {
 .blurhash-canvas,
 .dialog,
 .countIndicator,
-.playedIndicator,
 .listItemIcon,
 .listItem-border,
 .visualCardBox,
@@ -695,14 +694,14 @@ progress::-webkit-progress-bar {
   border-radius: 0px var(--rounding) !important;
   box-shadow: 1px -1px 4px 0 rgba(0,0,0,0.3);
 }
-.countIndicator, .playedIndicator {
+.countIndicator {
   border-radius: 0px var(--rounding) !important;
   box-shadow: -1px 1px 4px 0 rgba(0,0,0,0.3);
 }
 .countIndicator {
   background: rgba(var(--indicator),0.8);
 }
-.playedIndicator, .innerCardFooter {
+.innerCardFooter {
   background: rgba(0,0,0,0.4)
 }
 
