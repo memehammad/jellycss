@@ -2,20 +2,21 @@
   --darkerGradientPoint: #111827;
   --lighterGradientPoint: #1d2635;
   --borderColor: rgb(71, 80, 92);
-  --headerColor: rgba(30, 40, 54, .8);
-  --drawerColor: rgba(30, 40, 54, .9);
+  --headerColor: rgba(30, 40, 54, 0.8);
+  --drawerColor: rgba(30, 40, 54, 0.9);
   --lighterBorderColor: rgb(255 255 255 / 20%);
   --selectorBackgroundColor: rgb(55, 65, 81);
   --btnSubmitColor: rgb(61, 54, 178);
   --btnSubmitBorderColor: rgb(117 111 226);
   --checkboxCheckedBgColor: rgb(79, 70, 229);
   --backgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint) 35%, var(--lighterGradientPoint));
-  --cardBackgroundGradient: linear-gradient(0deg, var(--darkerGradientPoint), var(--lighterGradientPoint) 25%);
   --hoverGradient: linear-gradient(130deg, rgb(255 255 255 / 20%) 20%, rgb(255 255 255 / 10%) 40%);
   --activeColor: rgb(201 143 255 / 40%);
 }
 
-
+html {
+  background: var(--backgroundGradient);
+}
 
 .countIndicator,
 .fullSyncIndicator,
@@ -29,15 +30,6 @@
   border: var(--lighterBorderColor) solid var(--borderWidth);
 }
 
-.cardOverlayContainer {
-  border: solid rgb(255 255 255 / 65%) var(--borderWidth);
-  background: var(--hoverGradient);
-}
-
-.cardBox:not(.visualCardBox) .cardPadder {
-  background-color: var(--lighterGradientPoint);
-}
-
 .detailRibbon {
   background-color: transparent;
 }
@@ -47,27 +39,22 @@
 }
 
 .nowPlayingPlaylist,
-.nowPlayingContextMenu,
-html {
+.nowPlayingContextMenu {
   background: var(--backgroundGradient);
 }
 
-.backgroundContainer:not(.withBackdrop) {
-  background: var(--backgroundGradient);
-}
-
+.backgroundContainer:not(.withBackdrop),
 .backgroundContainer.withBackdrop {
-  background: var(--backgroundGradient);
+  background: var(--backgroundGradient); /* This was redundant, now consolidated */
 }
 
 .skinHeader-blurred:not(.osdHeader) {
-  background-color: var(--headerColor) !important;
+  background-color: var(--headerColor);
 }
 
 .skinHeader:not(.osdHeader) {
   border-color: var(--borderColor);
 }
-
 
 .emby-select-withcolor,
 .emby-select,
@@ -78,23 +65,20 @@ html {
 }
 
 .btnPlay {
-  background-color: rgba(255, 255, 255, .05);
+  background-color: rgba(255, 255, 255, 0.05);
   border: solid var(--lighterBorderColor) var(--borderWidth);
 }
 
-.inputContainer .emby-input-iconbutton {
-  color: rgba(255, 255, 255, .5);
-}
-
+.inputContainer .emby-input-iconbutton,
 .searchfields-icon {
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .searchfields-icon:hover,
 .searchfields-icon:active,
 .inputContainer .emby-input-iconbutton:hover,
 .inputContainer .emby-input-iconbutton:active {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .button-link {
@@ -102,7 +86,7 @@ html {
 }
 
 .button-link:hover {
-  color: rgb(243, 243, 243) !important;
+  color: rgb(243, 243, 243);
 }
 
 .mainDrawer,
@@ -116,10 +100,8 @@ html {
 }
 
 .button-flat:hover {
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
-
-
 
 .itemDetailsGroup {
   outline: var(--borderWidth) solid var(--borderColor);
@@ -152,21 +134,11 @@ html {
   border: solid rgb(124 124 124 / 50%) var(--borderWidth);
 }
 
-.defaultCardBackground,
-.cardScalable {
-  background: var(--cardBackgroundGradient) !important;
-}
-
 .emby-button.block,
 .button-alt,
 .raised,
 #btnDeleteImage,
-.dashboardActionsContainer>.emby-button {
-  color: #fff;
-  background: var(--lighterGradientPoint);
-  border: solid var(--borderColor) var(--borderWidth);
-}
-
+.dashboardActionsContainer>.emby-button,
 .fab {
   color: #fff;
   background: var(--lighterGradientPoint);
@@ -180,24 +152,20 @@ html {
 }
 
 .button-submit {
-  background: var(--btnSubmitColor) !important;
-  border: solid var(--btnSubmitBorderColor) var(--borderWidth) !important;
+  background: var(--btnSubmitColor);
+  border: solid var(--btnSubmitBorderColor) var(--borderWidth);
 }
 
 .collapseContent,
 .formDialogFooter:not(.formDialogFooter-clear),
-.formDialogHeader:not(.formDialogHeader-clear) {
+.formDialogHeader:not(.formDialogHeader-clear),
+.visualCardBox,
+.paperList {
   background-color: var(--headerColor);
 }
 
-.visualCardBox,
-.paperList {
-  background-color: var(--headerColor) !important;
-  border: solid var(--borderColor) var(--borderWidth) !important;
-}
-
 .listItemIcon:not(.listItemIcon-transparent) {
-  background-color: var(--lighterGradientPoint) !important;
+  background-color: var(--lighterGradientPoint);
 }
 
 .MuiAppBar-root {
@@ -211,23 +179,21 @@ html {
 }
 
 .navMenuOption {
-  border-radius:var(--smallRadius)!important;
-  margin:.5em 1em!important;
+  border-radius: var(--smallRadius) !important;
+  margin: .5em 1em !important;
 }
 
-.listItem:hover,.navMenuOption:hover{
-    background:rgba(255,255,255,.125);
+.listItem:hover,
+.navMenuOption:hover {
+  background: rgba(255, 255, 255, .125);
 }
 
-.navMenuOption-selected {
-  background-color: var(--activeColor) !important;
+.navMenuOption-selected,
+.Mui-selected {
+  background-color: var(--activeColor);
   border: solid var(--lighterBorderColor) var(--borderWidth);
 }
 
-.Mui-selected {
-  background-color: var(--activeColor) !important;
-  border: solid var(--lighterBorderColor) var(--borderWidth) !important;
-}
-
 .sliderBubble {
-    border:solid var(--borderWidth
+    border:solid var(--borderWidth);
+}
